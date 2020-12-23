@@ -2,9 +2,6 @@
 https://github.com/iCatButler/pcsxr
 A plugin based PlayStation (PSX) emulator with high compatibility
 
-In gnome-shell use tray icon extension to see legacy system tray icons.
-https://extensions.gnome.org/extension/1503/tray-icons/
-
 #### install flathub repo and freedesktop sdk 18.08
 ```
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
