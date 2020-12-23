@@ -1,0 +1,33 @@
+app-id: io.github.pcsxr
+runtime: org.freedesktop.Platform
+runtime-version: '18.08'
+sdk: org.freedesktop.Sdk
+command: pcsxr
+
+finish-args:
+  - --socket=wayland
+  - --socket=x11
+  - --share=ipc
+  - --share=network
+  - --device=dri
+  - --device=all
+  - --socket=pulseaudio
+  - --filesystem=host
+  - --socket=session-bus
+  - --socket=system-bus
+modules:
+
+- name: pcsxr
+  buildsystem: cmake
+  sources:
+  - type: archive
+    url: https://github.com/iCatButler/pcsxr/archive/62467b86871aee3d70c7445f3cb79f0858ec566e/pcsxr-62467b8.tar.gz
+    sha256: c3f88f76a538036e95b61e0a0e1890c080f11617779d52f5622b45a8eff8014a
+  post-install:
+  - cp ${FLATPAK_DEST}/share/applications/pcsxr.desktop
+    ${FLATPAK_DEST}/share/applications/io.github.pcsxr.desktop
+  - sed 's/Icon=pcsxr-icon/Icon=io.github.pcsxr/g' -i 
+    ${FLATPAK_DEST}/share/applications/io.github.pcsxr.desktop
+  - mkdir -p ${FLATPAK_DEST}/share/icons/hicolor/48x48/apps/
+  - cp ${FLATPAK_DEST}/share/icons/hicolor/48x48/apps/pcsxr-icon.png
+    ${FLATPAK_DEST}/share/icons/hicolor/48x48/apps/io.github.pcsxr.png
