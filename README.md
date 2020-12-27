@@ -2,6 +2,8 @@
 https://github.com/iCatButler/pcsxr
 A plugin based PlayStation (PSX) emulator with high compatibility
 
+After 1st run copy the bios (SCPH1001.BIN) in ~/.pcsxr/bios directory, PS1 bios is required for better compatiblity of games like Crash Bash.
+
 #### install flathub repo and freedesktop sdk 18.08
 ```
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
