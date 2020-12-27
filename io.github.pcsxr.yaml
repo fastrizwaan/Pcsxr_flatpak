@@ -1,6 +1,6 @@
 app-id: io.github.pcsxr
 runtime: org.freedesktop.Platform
-# build fails with 20.08
+# build fails with 19.08 and 20.08
 runtime-version: '18.08'
 sdk: org.freedesktop.Sdk
 rename-desktop-file: pcsxr.desktop
