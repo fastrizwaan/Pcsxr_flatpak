@@ -15,8 +15,7 @@ finish-args:
   - --socket=pulseaudio
   - --filesystem=host:ro
   - --filesystem=~/.pcsxr:create
-#  - --socket=session-bus
-#  - --socket=system-bus
+
 modules:
 
 - name: pcsxr
@@ -26,8 +25,6 @@ modules:
     url: https://github.com/iCatButler/pcsxr/archive/62467b86871aee3d70c7445f3cb79f0858ec566e/pcsxr-62467b8.tar.gz
     sha256: c3f88f76a538036e95b61e0a0e1890c080f11617779d52f5622b45a8eff8014a
   post-install:
- # - install -Dm644 ${FLATPAK_DEST}/share/applications/pcsxr.desktop
- #   ${FLATPAK_DEST}/share/applications/io.github.pcsxr.desktop
   - sed 's/Icon=pcsxr-icon/Icon=io.github.pcsxr/g' -i 
     ${FLATPAK_DEST}/share/applications/pcsxr.desktop
   - mkdir -p ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/
