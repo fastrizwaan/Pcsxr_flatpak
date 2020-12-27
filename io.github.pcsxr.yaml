@@ -30,5 +30,5 @@ modules:
   - sed 's/Icon=pcsxr-icon/Icon=io.github.pcsxr/g' -i 
     ${FLATPAK_DEST}/share/applications/pcsxr.desktop
   - mkdir -p ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/
-  - install -Dm644 ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/pcsxr-icon.png
+  - install -Dm644 ${FLATPAK_DEST}/share/icons/hicolor/48x48/apps/pcsxr-icon.png
     ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/io.github.pcsxr.png
